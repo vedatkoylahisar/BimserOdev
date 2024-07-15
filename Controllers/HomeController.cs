@@ -153,6 +153,11 @@ namespace PerfectNumber.Controllers
                 return sayi * FaktoriyelHesapla(sayi - 1);
         }
 
+        public IActionResult TypeScript()
+        {
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {
