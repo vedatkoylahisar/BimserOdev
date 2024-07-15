@@ -1,0 +1,70 @@
+﻿/* Navbar style */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .navbar h2 {
+        margin: 0;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1rem;
+    }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+/* Container style */
+.container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 2rem;
+}
+
+/* MergeSortNedir style */
+.MergeSortNedir {
+    width: 40%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #343a40;
+    margin-right: 2rem; /* Yeni eklenen satır */
+}
+
+    .MergeSortNedir p {
+        line-height: 1.6;
+        color: #495057;
+    }
+
+/* MergeSortUygulama style */
+.MergeSortUygulama {
+    width: 40%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #343a40;
+}

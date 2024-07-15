@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BimserOdev", "BimserOdev.csproj", "{835FA504-4BD8-4510-AA3B-18AAD6E71C5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{835FA504-4BD8-4510-AA3B-18AAD6E71C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835FA504-4BD8-4510-AA3B-18AAD6E71C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835FA504-4BD8-4510-AA3B-18AAD6E71C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835FA504-4BD8-4510-AA3B-18AAD6E71C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE5F6D10-BD0B-4F05-8D09-B2DA2C8F090E}
+	EndGlobalSection
+EndGlobal

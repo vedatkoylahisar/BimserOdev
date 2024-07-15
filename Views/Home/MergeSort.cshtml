@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "MergeSort";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/MergeSort.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="MergeSortNedir">
+            <h1>MergeSort Algoritması nedir?</h1>
+            <p>
+                Merge sort, bilgisayar biliminde yaygın olarak kullanılan bir sıralama algoritmasıdır. Bu algoritma, "böl ve yönet" (divide and conquer) yöntemine dayanır.
+                İşleyişi şu şekildedir:<br /><br />
+
+                Bölme (Divide): Liste, ortadan ikiye bölünür.<br />
+                Yönetme (Conquer): Her bir alt liste, rekürsif olarak merge sort algoritması kullanılarak sıralanır.<br />
+                Birleştirme (Combine): Sıralanmış alt listeler, birleşme adımıyla tek bir sıralı liste haline getirilir.<br /><br />
+
+                Merge sort algoritması, her iki alt listenin de zaten sıralı olduğunu varsayarak çalışır ve bu iki alt listeyi birleştirerek tek bir sıralı liste oluşturur.<br />
+                Merge sort'un temel özellikleri şunlardır: <br /><br />
+
+                Zaman Karmaşıklığı: O(n log n), en kötü durumda bile bu karmaşıklığa sahiptir. <br />
+                Alan Karmaşıklığı: O(n), ek bir dizi gerektirdiği için alan karmaşıklığı yüksektir. <br />
+                Stabil Sıralama: Aynı değere sahip elemanların sıralı kalmasını sağlar. <br />
+
+                Bu algoritma, büyük veri kümeleri için uygun bir sıralama yöntemidir ve özellikle dosya sıralama gibi durumlarda yaygın olarak kullanılır.
+            </p>
+        </div>
+
+        <div class="MergeSortUygulama">
+            <h1>MergeSort Algoritması uygulaması</h1>
+            <form method="post" asp-action="MergeSortHesaplama">
+                <input type="text" id="textboxInput" name="textboxInput" placeholder="Veri giriniz...">
+                <button type="submit" id="btnSubmit">Sırala</button>
+            </form>
+
+            @if (ViewBag.Result != null)
+            {
+                <p id="result">@ViewBag.Result</p>
+            }
+        </div>
+    </div>
+</body>
+</html>

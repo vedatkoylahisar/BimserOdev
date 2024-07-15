@@ -1,0 +1,25 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="BolenlerinToplamıHesaplama">
+            <h1>Bölenlerin Toplamı Hesaplama</h1>
+            <form method="post" asp-action="Calculate">
+                <input type="number" name="numberInput" placeholder="Pozitif bir tamsayı girin" required />
+                <button type="submit">Hesapla</button>
+            </form>
+            @if (ViewBag.Result != null)
+            {
+                <p id="result">@ViewBag.Result</p>
+            }
+        </div>
+        
+    </div>
+</body>
+</html>

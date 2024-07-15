@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Faktoriyel Hesaplama";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/OzyinelemeliStyle.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="Faktoriyel">
+            <h1>Faktoriyel Hesaplama</h1>
+            <form method="post" asp-action="Faktoriyel">
+                <input type="number" name="numberInput" placeholder="Pozitif bir tamsayı girin" required />
+                <button type="submit">Hesapla</button>
+            </form>
+            @if (ViewBag.Result != null)
+            {
+                <p id="result">@ViewBag.Result</p>
+            }
+        </div>
+
+        <div class="OzyinelemeliNedir">
+            <h1>Özyinelemeli Fonksiyon Nedir?</h1>
+            <p>
+                Özyinelemeli fonksiyon (veya rekürsif fonksiyon), bir problemin çözümünü daha küçük alt problemlere bölerek ve bu alt problemleri aynı yöntemle çözerek çalışan bir fonksiyondur. Özyinelemeli fonksiyonlar, bir fonksiyonun kendisini çağırdığı fonksiyonlardır.<br /><br />
+
+                Özyinelemeli bir fonksiyonun iki ana bileşeni vardır:<br /><br />
+
+                <strong>Temel Durum (Base Case):</strong> Bu, özyinelemeli fonksiyonun duracağı durumdur. Temel durum, genellikle problemin en küçük ve en basit halini temsil eder ve doğrudan çözülebilir. Temel duruma ulaşıldığında, fonksiyon kendisini çağırmayı durdurur ve bir değer döndürür.<br /><br />
+
+                <strong>Özyinelemeli Durum (Recursive Case):</strong> Bu durumda fonksiyon, problemi daha küçük alt problemlere böler ve kendisini bu alt problemlerle çağırır. Her özyinelemeli çağrıda, problem bir adım daha küçülür ve temel duruma yaklaşır.<br /><br />
+
+                Özyinelemeli fonksiyonlara klasik bir örnek, faktöriyel hesaplamasıdır. Faktöriyel, bir sayının kendisinden küçük tüm pozitif tam sayıların çarpımıdır. Örneğin, 5! (5 faktöriyel) 5 x 4 x 3 x 2 x 1 şeklinde hesaplanır.<br /><br />
+
+                Faktöriyel hesaplamasının özyinelemeli tanımı şu şekildedir:<br /><br />
+
+                * 0! = 1 (temel durum)<br />
+                * n! = n * (n - 1)! (özyinelemeli durum)<br />
+
+
+
+            </p>
+        </div>
+        <div class="OzyinelemeliOlumsuz">
+            <h1>Özyinelemeli Fonksiyon Olumsuz yönleri Nedir?</h1>
+            <p>
+                Özyinelemeli fonksiyonlar (rekürsif fonksiyonlar) birçok problem için etkili çözümler sunsa da, bazı durumlarda kullanımı çeşitli zararlara ve dezavantajlara yol açabilir. İşte özyinelemeli fonksiyonların bazı olumsuz yönleri:<br /><br />
+
+                1) Yığın Taşması (Stack Overflow):<br /> Özyinelemeli fonksiyonlar, her bir çağrı için çağrı yığınında yeni bir çerçeve oluşturur. Çok derin veya sonsuz özyinelemeler, yığının dolmasına ve yığın taşmasına yol açabilir.<br /><br />
+
+                2) Performans Sorunları:<br /> Özyinelemeli fonksiyonlar, tekrarlı hesaplamalar yapabilir ve bu da zaman karmaşıklığını artırabilir. Örneğin, klasik özyinelemeli Fibonacci hesaplaması, aynı alt problemleri tekrar tekrar hesaplar ve bu nedenle çok verimsizdir.<br /><br />
+
+                3) Bellek Kullanımı:<br /> Her özyinelemeli çağrı, çağrı yığınında yer kaplar ve bu da bellek tüketimini artırır. Derin özyinelemeler, bellek tüketimini önemli ölçüde artırabilir.<br /><br />
+
+                4) Anlama ve Hata Ayıklama Zorluğu:<br /> Özellikle karmaşık özyinelemeli fonksiyonlar, anlama ve hata ayıklama açısından zor olabilir. Özyinelemeli fonksiyonların nasıl çalıştığını takip etmek, özellikle başlangıç seviyesindeki programcılar için zorlayıcı olabilir.<br /><br />
+
+                5) İteratif Alternatifler Daha Verimli Olabilir:<br /> Bazı problemler, özyinelemeli yerine iteratif yaklaşımlarla daha verimli çözülebilir. İteratif çözümler, genellikle daha az bellek kullanır ve daha hızlı çalışır.<br /><br />
+
+                6) Dil ve Çalışma Ortamı Kısıtlamaları:<br /> Bazı programlama dilleri veya çalışma ortamları, özyinelemeyi iyi desteklemeyebilir veya belirli sınırlamalar getirebilir. Bu tür durumlarda, özyineleme yerine diğer yöntemleri kullanmak gerekebilir.<br /><br />
+
+                Özyinelemeli fonksiyonların olumsuz yönlerine rağmen, doğru kullanıldıklarında ve uygun önlemler alındığında (örneğin, dinamik programlama ile tekrarlı hesaplamaların önlenmesi), birçok problem için etkili ve zarif çözümler sunabilirler.
+
+
+
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
