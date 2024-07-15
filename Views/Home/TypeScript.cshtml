@@ -11,21 +11,92 @@
         <div class="TypeScriptNedir">
             <h1>TypeScript nedir?</h1>
             <p>
-               
+                TypeScript, JavaScript'in üstünde çalışan ve Microsoft tarafından geliştirilen bir programlama dilidir. TypeScript, JavaScript'e ek olarak statik tip kontrolü ve nesne yönelimli programlama özellikleri sunar. JavaScript'in üzerine kurulu olduğundan, mevcut JavaScript kodu TypeScript projelerinde kullanılabilir ve TypeScript kodu JavaScript'e derlenir. Bu özellikleri sayesinde büyük ve karmaşık projelerde kodun daha anlaşılır, sürdürülebilir ve hata ayıklanabilir olmasını sağlar.<br /><br />
+
+                TypeScript'in bazı temel özellikleri şunlardır:<br />
+
+               1) Statik Tip Kontrolü: Tip hatalarını derleme aşamasında yakalamayı sağlar, böylece run-time hataları azalır.<br /><br />
+               2) Gelişmiş IDE Desteği: Tip bilgilerinin varlığı sayesinde editörler ve IDE'ler daha iyi otomatik tamamlama, hata bulma ve kod navigasyonu sağlar.<br /><br />
+               3) Nesne Yönelimli Programlama: Sınıflar, arayüzler ve kalıtım gibi nesne yönelimli programlama özelliklerini destekler.<br /><br />
+               4) Modern JavaScript Özellikleri: ES6 ve üstü JavaScript özelliklerini destekler ve eski tarayıcılarla uyumlu olacak şekilde JavaScript'e derlenir.<br /><br />
+                TypeScript kullanarak, büyük ölçekli uygulamalarda daha güvenilir ve sürdürülebilir kod yazmak mümkündür.
             </p>
         </div>
 
         <div class="TypeScriptFark">
             <h1>TypeScript farkları nedir?</h1>
             <p>
+               
+                1) JavaScript Üzerine Kurulu Olması:<br />
+                TypeScript, JavaScript'in üstünde çalışır ve mevcut JavaScript kodu TypeScript dosyalarında kullanılabilir. Bu, geliştiricilerin mevcut projelere kolayca TypeScript eklemelerine olanak tanır.<br /><br />
+                
+                2)Statik Tip Kontrolü:<br />
+                TypeScript, değişkenler, fonksiyonlar ve nesneler için tipleri önceden belirleyerek derleme zamanında tip hatalarını yakalar. Bu, runtime hatalarını azaltır ve kodun daha güvenli olmasını sağlar.<br /><br />
+                
+                3)Type Inference (Tip Çıkarımı):<br />
+                TypeScript, bazı durumlarda değişkenlerin tiplerini otomatik olarak çıkarabilir, bu da kodun daha temiz ve okunabilir olmasını sağlar.<br /><br />
+                
+                4)Modern JavaScript Özelliklerini Desteklemesi:<br />
+                TypeScript, ES6 ve üstü JavaScript özelliklerini destekler ve bu özellikleri eski tarayıcılarla uyumlu olacak şekilde derler. Bu, geliştiricilerin modern JavaScript özelliklerini kullanmalarına olanak tanır.<br /><br />
+                
+                5)Nesne Yönelimli Programlama (OOP) Desteği:<br />
+                TypeScript, sınıflar, arayüzler, kalıtım ve diğer OOP kavramlarını destekler. Bu, daha yapılandırılmış ve modüler kod yazmayı kolaylaştırır.<br /><br />
+                
+                6)Gelişmiş IDE Desteği:<br />
+                Tip bilgileri sayesinde TypeScript, IDE'lerde ve editörlerde daha iyi otomatik tamamlama, hata bulma ve kod navigasyonu sağlar. Bu, geliştirme sürecini hızlandırır ve geliştirici deneyimini iyileştirir.<br /><br />
+                
+                7)Modülerlik:<br />
+                TypeScript, modüler yapılar oluşturmayı destekler. Modüller, kodun daha iyi organize edilmesini ve yeniden kullanılabilir olmasını sağlar.<br /><br />
+                
+                8)Dekoratörler ve Diğer Gelişmiş Özellikler:<br />
+                TypeScript, dekoratörler gibi gelişmiş özellikler sunar. Bu özellikler, kodunuzu daha esnek ve güçlü hale getirmenize yardımcı olabilir.<br /><br />
+                Bu özellikler, TypeScript'in özellikle büyük ve karmaşık projelerde tercih edilmesini sağlar. Statik tip kontrolü ve modern JavaScript özellikleri, geliştiricilerin daha güvenilir ve sürdürülebilir kod yazmalarına yardımcı olur.
 
             </p>
         </div>
 
         <div class="TypeScriptUygulama">
-            <h1>TypeScript Uygulaması</h1>
-           
+            <h1>TypeScript ile Toplama </h1>
+            <form id="toplamaForm">
+                <input type="text" id="sayi1" name="sayi1" placeholder="Veri giriniz...">
+                <input type="text" id="sayi2" name="sayi2" placeholder="Veri giriniz...">
+                <button type="button" id="btnTopla">topla</button>
+                
+            </form>
+
+            <p id="result"></p>
         </div>
+
+        <script>
+            var inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(function (input) {
+                input.addEventListener('input', function () {
+                    let sayi1 = document.getElementById('sayi1').value;
+                    let sayi2 = document.getElementById('sayi2').value;
+
+                    if (sayi1 > 100) {
+                        document.getElementById('sayi1').style.borderColor = 'red';
+                    } else {
+                        document.getElementById('sayi1').style.borderColor = '';
+                    }
+
+                    if (sayi2 > 100) {
+                        document.getElementById('sayi2').style.borderColor = 'red';
+                    } else {
+                        document.getElementById('sayi2').style.borderColor = '';
+                    }
+
+                    document.getElementById('btnTopla').addEventListener('click', function () {
+                        var sayi1 = document.getElementById('sayi1').value;
+                        var sayi2 = document.getElementById('sayi2').value;
+                        var toplam = sayi1 + sayi2;
+                        document.getElementById('result').textContent = 'Toplam: ' + toplam;
+                    });
+                      
+                });
+            });
+        </script>
+
     </div>
 </body>
 </html>
